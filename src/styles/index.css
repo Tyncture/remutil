@@ -1,0 +1,34 @@
+@import "~normalize.css";
+
+.remutil__main {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-areas:
+    "a a"
+    "b c";
+}
+
+.remutil__main > section {
+  display: flex;
+  flex-direction: column;
+}
+
+.remutil__root_px_section {
+  grid-area: a;
+}
+
+.remutil__px_section {
+  grid-area: b;
+}
+
+.remutil__rem_section {
+  grid-area: c;
+}
+
+input:required {
+    box-shadow:none;
+}
+input:invalid {
+    box-shadow: none;
+}
+
