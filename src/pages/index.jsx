@@ -46,7 +46,7 @@ function Remutil() {
         <title>remutil | Tyncture</title>
       </Helmet>
       <main className="remutil__main">
-        <section className="remutil__root-px-section">
+        <section className="remutil__root-px_section">
           <label htmlFor="root-px">Root Font Size (px)</label>
           <input
             type="number"
@@ -56,7 +56,7 @@ function Remutil() {
             onChange={handleRootPxChange}
           />
         </section>
-        <section className="remutil__px-section">
+        <section className="remutil__px_section">
           <label htmlFor="px">px</label>
           <input
             type="number"
