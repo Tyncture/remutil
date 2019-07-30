@@ -28,7 +28,7 @@ function Remutil() {
         setRemField(pxField / value)
       }
     },
-    [setRootPxField, setRemField]
+    [setRootPxField, setRemField, pxField]
   )
 
   const handlePxChange = useCallback(
@@ -39,7 +39,7 @@ function Remutil() {
         setRemField(value / rootPxField)
       }
     },
-    [setPxField, setRemField]
+    [setPxField, setRemField, rootPxField]
   )
 
   const handleRemChange = useCallback(
@@ -50,7 +50,7 @@ function Remutil() {
         setPxField(rootPxField * value)
       }
     },
-    [setRemField, setPxField]
+    [setRemField, setPxField, rootPxField]
   )
 
   return (
