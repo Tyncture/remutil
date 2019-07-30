@@ -1,18 +1,33 @@
 @import "~normalize.css";
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700");
+
+.remutil {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
 
 .remutil__main {
+  width: 100%;
+  max-width: 31.25rem;
   display: grid;
   grid-auto-flow: column;
   grid-template-areas:
     "a a"
     "b c";
-  justify-items: center;
+  grid-gap: 1.375rem;
+  align-items: center;
+  padding: 1.875rem;
 }
 
 .remutil__main > section {
   width: 100%;
   display: flex;
   flex-direction: column;
+  font-size: 1.375rem;
 }
 
 .remutil__root_px_section {
@@ -27,9 +42,28 @@
   grid-area: c;
 }
 
+label {
+  margin-bottom: 0.625rem;
+  text-transform: lowercase;
+  user-select: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  border: 0.0625rem solid lightgray;
+  width: 100%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 input:required {
   box-shadow: none;
 }
+
 input:invalid {
   box-shadow: none;
 }
@@ -45,5 +79,11 @@ a {
 .remutil__footer {
   position: fixed;
   bottom: 1.875rem;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
+  color: #b0b0b0;
+  user-select: none;
+}
+
+.remutil__footer > a {
+  color: #b0b0b0;
 }

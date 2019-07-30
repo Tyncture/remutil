@@ -59,8 +59,8 @@ function Remutil() {
         <title>remutil | Tyncture</title>
       </Helmet>
       <main className="remutil__main">
-        <section className="remutil__root-px_section">
-          <label htmlFor="root-px">Root Font Size (px)</label>
+        <section className="remutil__root_px_section">
+          <label htmlFor="root-px">Root Font px</label>
           <input
             type="number"
             name="root-px"
@@ -89,17 +89,17 @@ function Remutil() {
             onChange={handleRemChange}
           />
         </section>
-        <footer className="remutil__footer">
-          Made by&nbsp;
-          <a href="https://github.com/Tyncture/remutil">
-            <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon> Tyncture
-          </a>
-          &nbsp;and published under the&nbsp;
-          <a href="https://github.com/Tyncture/remutil/blob/master/LICENSE.md">
-            <FontAwesomeIcon icon={faOsi}></FontAwesomeIcon> MIT License
-          </a>
-        </footer>
       </main>
+      <footer className="remutil__footer">
+        Made by&nbsp;
+        <a href="https://github.com/Tyncture/remutil">
+          <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon> Tyncture
+        </a>
+        &nbsp;and published under&nbsp;
+        <a href="https://github.com/Tyncture/remutil/blob/master/LICENSE.md">
+          <FontAwesomeIcon icon={faOsi}></FontAwesomeIcon> MIT License
+        </a>
+      </footer>
     </div>
   )
 }
