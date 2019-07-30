@@ -89,6 +89,9 @@ a {
   position: fixed;
   bottom: 1.875rem;
   font-size: 0.8125rem;
+  text-align: center;
+  line-height: 1.25rem;
+  padding: 0 0.75rem;
   color: #b0b0b0;
   user-select: none;
 }
