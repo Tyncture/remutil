@@ -96,7 +96,7 @@ function Remutil() {
         <a href="https://github.com/Tyncture/remutil">
           <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon> Tyncture
         </a>
-        &nbsp;and published under&nbsp;
+        &nbsp;and published under the&nbsp;
         <a href="https://github.com/Tyncture/remutil/blob/master/LICENSE.md">
           <FontAwesomeIcon icon={faOsi}></FontAwesomeIcon> MIT License
         </a>
