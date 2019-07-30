@@ -1,9 +1,10 @@
 import React, { useState, useCallback } from "react"
 import { Helmet } from "react-helmet"
-import "../styles/index.css"
 import validator from "validator"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faOsi } from "@fortawesome/free-brands-svg-icons"
+import "@fortawesome/fontawesome-svg-core/styles.css"
+import "../styles/index.css"
 
 function Remutil() {
   const [rootPxField, setRootPxField] = useState(16)
