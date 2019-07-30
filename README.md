@@ -1,6 +1,12 @@
 # remutil
+![Repository Size](https://img.shields.io/github/repo-size/Tyncture/remutil.svg?t&style=flat-square)
+![License](https://img.shields.io/github/license/Tyncture/remutil.svg?&style=flat-square)
+![Top Language](https://img.shields.io/github/languages/top/Tyncture/remutil.svg?&style=flat-square)
+[![Website Uptime](https://img.shields.io/website-up-down-green-red/http/remutil.tyncture.dev.svg?label=remutil.tynvcture.dev&style=flat-square)](https://remutil.tyncture.dev)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2fe921ff-bbac-48f1-8c61-38462f837370/deploy-status)](https://app.netlify.com/sites/youthful-shockley-1035df/deploys)
 
-A web based utility for converting between rem and pixels. No ads, no distractions, 
+
+A  based utility for converting between rem and pixels. No ads, no distractions, 
 and free software in all senses.
 
 ## License
