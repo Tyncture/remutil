@@ -6,9 +6,11 @@
   grid-template-areas:
     "a a"
     "b c";
+  justify-items: center;
 }
 
 .remutil__main > section {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -26,9 +28,22 @@
 }
 
 input:required {
-    box-shadow:none;
+  box-shadow: none;
 }
 input:invalid {
-    box-shadow: none;
+  box-shadow: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+:focus {
+  outline: none;
+}
+
+.remutil__footer {
+  position: fixed;
+  bottom: 1.875rem;
+  font-size: 0.75rem;
+}

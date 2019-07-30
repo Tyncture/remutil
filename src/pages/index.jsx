@@ -2,6 +2,8 @@ import React, { useState, useCallback } from "react"
 import { Helmet } from "react-helmet"
 import "../styles/index.css"
 import validator from "validator"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub, faOsi } from "@fortawesome/free-brands-svg-icons"
 
 function Remutil() {
   const [rootPxField, setRootPxField] = useState(16)
@@ -13,32 +15,43 @@ function Remutil() {
   }
 
   function format(input) {
+    // Allow fields to be non-numeric when empty
+    // "" causes HTML form input to be uncontrolled
     return isEmpty(input) ? " " : validator.isNumeric(input) ? input : " "
   }
 
-  const handleRootPxChange = useCallback(e => {
-    const value = format(e.target.value)
-    setRootPxField(value)
-    if (validator.isNumeric(value)) {
-      setRemField(pxField / value)
-    }
-  })
+  const handleRootPxChange = useCallback(
+    element => {
+      const value = format(element.target.value)
+      setRootPxField(value)
+      if (validator.isNumeric(value)) {
+        setRemField(pxField / value)
+      }
+    },
+    [setRootPxField, setRemField]
+  )
 
-  const handlePxChange = useCallback(e => {
-    const value = format(e.target.value)
-    setPxField(value)
-    if (validator.isNumeric(value)) {
-      setRemField(value / rootPxField)
-    }
-  })
+  const handlePxChange = useCallback(
+    element => {
+      const value = format(element.target.value)
+      setPxField(value)
+      if (validator.isNumeric(value)) {
+        setRemField(value / rootPxField)
+      }
+    },
+    [setPxField, setRemField]
+  )
 
-  const handleRemChange = useCallback(e => {
-    const value = format(e.target.value)
-    setRemField(value)
-    if (validator.isNumeric(value)) {
-      setPxField(rootPxField * value)
-    }
-  })
+  const handleRemChange = useCallback(
+    element => {
+      const value = format(element.target.value)
+      setRemField(value)
+      if (validator.isNumeric(value)) {
+        setPxField(rootPxField * value)
+      }
+    },
+    [setRemField, setPxField]
+  )
 
   return (
     <div className="remutil">
@@ -76,6 +89,16 @@ function Remutil() {
             onChange={handleRemChange}
           />
         </section>
+        <footer className="remutil__footer">
+          Made by&nbsp;
+          <a href="https://github.com/Tyncture/remutil">
+            <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon> Tyncture
+          </a>
+          &nbsp;and published under the&nbsp;
+          <a href="https://github.com/Tyncture/remutil/blob/master/LICENSE.md">
+            <FontAwesomeIcon icon={faOsi}></FontAwesomeIcon> MIT License
+          </a>
+        </footer>
       </main>
     </div>
   )
