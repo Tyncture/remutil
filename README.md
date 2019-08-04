@@ -6,7 +6,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2fe921ff-bbac-48f1-8c61-38462f837370/deploy-status)](https://remutil.tyncture.dev)
 
 
-A  based utility for converting between rem and pixels. No ads, no distractions, 
+A web based utility for converting between rem and pixels. No ads, no distractions, 
 and free software in all senses.
 
 ## License
