@@ -9,6 +9,15 @@
 A web based utility for converting between rem and pixels. No ads, no distractions, 
 and free software in all senses.
 
+## Usage
+
+The following features are available to use.
+- Conversion from pixels to rem
+- Conversion from rem to pixels
+- Custom root font size in pixels
+
+A deployment can be found at [remutil.tyncture.dev](https://remutil.tyncture.dev/).
+
 ## License
 ```
 MIT License
