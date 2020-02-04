@@ -1,58 +1,52 @@
-import React, { useState, useCallback, createRef } from "react"
-import { Helmet } from "react-helmet"
-import validator from "validator"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub, faOsi } from "@fortawesome/free-brands-svg-icons"
-import "@fortawesome/fontawesome-svg-core/styles.css"
-import "../styles/index.css"
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { faGithub, faOsi } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useCallback, useState } from "react";
+import { Helmet } from "react-helmet";
+import validator from "validator";
+import "../styles/index.css";
 
 function Remutil() {
-  const [rootPxField, setRootPxField] = useState(16)
-  const [pxField, setPxField] = useState(16)
-  const [remField, setRemField] = useState(1)
+  const [rootPxField, setRootPxField] = useState(16);
+  const [pxField, setPxField] = useState(16);
+  const [remField, setRemField] = useState(1);
 
-  function isEmpty(input) {
-    return typeof input !== "string" || input.length === 0
-  }
-
-  function format(input) {
-    // Allow fields to be non-numeric when empty
-    // "" causes HTML form input to be uncontrolled
-    return isEmpty(input) ? " " : validator.isNumeric(input) ? input : " "
-  }
+  const isEmpty = input => typeof input !== "string" || input.length === 0;
+  const format = input =>
+    isEmpty(input) ? " " : validator.isNumeric(input) ? input : " ";
 
   const handleRootPxChange = useCallback(
     element => {
-      const value = format(element.target.value)
-      setRootPxField(value)
+      const value = format(element.target.value);
+      setRootPxField(value);
       if (validator.isNumeric(value)) {
-        setRemField(pxField / value)
+        setRemField(pxField / value);
       }
     },
-    [setRootPxField, setRemField, pxField]
-  )
+    [setRootPxField, setRemField, pxField],
+  );
 
   const handlePxChange = useCallback(
     element => {
-      const value = format(element.target.value)
-      setPxField(value)
+      const value = format(element.target.value);
+      setPxField(value);
       if (validator.isNumeric(value)) {
-        setRemField(value / rootPxField)
+        setRemField(value / rootPxField);
       }
     },
-    [setPxField, setRemField, rootPxField]
-  )
+    [setPxField, setRemField, rootPxField],
+  );
 
   const handleRemChange = useCallback(
     element => {
-      const value = format(element.target.value)
-      setRemField(value)
+      const value = format(element.target.value);
+      setRemField(value);
       if (validator.isNumeric(value)) {
-        setPxField(rootPxField * value)
+        setPxField(rootPxField * value);
       }
     },
-    [setRemField, setPxField, rootPxField]
-  )
+    [setRemField, setPxField, rootPxField],
+  );
 
   return (
     <div className="remutil">
@@ -102,7 +96,7 @@ function Remutil() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
 
-export default Remutil
+export default Remutil;
