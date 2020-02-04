@@ -1,7 +1,7 @@
 {
   "name": "remutil",
-  "description": "Web based utility for converting between rem and pixels",
-  "version": "0.1.0",
+  "description": "Web based utility for converting between rem and pixels.",
+  "version": "0.1.1",
   "author": "John Su",
   "license": "MIT",
   "dependencies": {
