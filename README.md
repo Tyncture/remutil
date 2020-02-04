@@ -9,7 +9,7 @@
 A web based utility for converting between rem and pixels. No ads, no distractions, 
 and free software in all senses.
 
-[![screenshot](https://i.imgur.com/f7P1onc.png)](https://remutil.tyncture.dev/)
+[![screenshot](https://giant.gfycat.com/ShinyExhaustedGalapagosmockingbird.gif)](https://remutil.tyncture.dev/)
 
 ## Usage
 
